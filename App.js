@@ -1,20 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import EquipeList from './screens/EquipeList';
+import EquipeForm from './screens/EquipeForm';
+import ParticipanteList from './screens/ParticipanteList';
+import ParticipanteForm from './screens/ParticipanteForm';
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Equipes">
+        <Stack.Screen name="Equipes" component={EquipeList} />
+        <Stack.Screen name="Nova Equipe" component={EquipeForm} />
+        <Stack.Screen name="Participantes" component={ParticipanteList} />
+        <Stack.Screen name="Novo Participante" component={ParticipanteForm} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
