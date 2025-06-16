@@ -39,11 +39,9 @@
    npm start
    ```
 
-# TODO:
-Implementar contador de participantes por equipe; Redirecionar a tela para a listagem de equipes após cadastrar um novo participante.
-
 4. Você pode agora escanear o QR code que aparecerá no terminal com seu dispositivo móvel para abrir a aplicação, ou pressionar **"a"** para abrir o emulador Android (caso tenha seguido o tutorial mencionado), ou "w" para abrir no navegador.
 
 ---
 
-
+# TODO:
+Implementar contador de participantes por equipe; Redirecionar a tela para a listagem de equipes após cadastrar um novo participante.
